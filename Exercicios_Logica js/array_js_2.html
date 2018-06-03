@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciando com Array em JS</title>
+</head>
+<body>
+    <div id="output"></div>
+   
+
+    <script>
+        
+        
+        function dia(){
+            var dias= new Array('Domingo','Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado');
+            var hoje= new Date();
+            var diaSemana= hoje.getDay();
+
+            // Duas formas de mostrar o dia da semana no alert
+            //forma 1 com Switch
+            
+           /* switch (diaSemana){
+                case 0:
+                alert('Hoje é Domingo');
+                break;
+
+                case 1:
+                alert('Hoje é Segunda');
+                break;
+
+                case 2:
+                alert('Hoje é Terça');
+                break;
+
+                case 3:
+                alert('Hoje é Quarta');
+                break;
+
+                case 4:
+                alert('Hoje é Quinta');
+                break;
+
+                case 5:
+                alert('Hoje é Sexta');
+                break;
+
+                case 6:
+                alert('Hoje é Sabado');
+                break;
+
+            }*/
+           
+
+            // forma dois :
+
+            // colocando a variável diaSemana, dentro do indice dias
+
+            alert('Hoje é : '+dias[diaSemana]); // o dia vai relacionar seu valor numerico, com o índice da variável atribuida no array
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        dia();
+
+
+
+     
+
+
+    
+    
+    </script>
+
+
+
+</body>
+</html>

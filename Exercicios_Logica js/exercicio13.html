@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lógica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <!--Criando Botões -->
+    <button onclick="iniciarCalculo('soma')">+</button>
+    <button onclick="iniciarCalculo('sub')">-</button>
+    <button onclick="iniciarCalculo('mult')">*</button>
+    <button onclick="iniciarCalculo('dvd')">/</button>
+
+
+
+
+    <div id="output">
+
+    </div>
+
+    <script>
+        // Variável de entrada do usuário
+        var n2 = prompt("escolha um número");
+        n2 = parseFloat(n2);
+
+        //Ativando a função e recebendo o parametro n2
+        escreve(n2);
+
+        function iniciarCalculo(op) { // Essa função recebe os valores  dos botões pelo parametro op
+            var n1 = document.querySelector('#output').textContent;// pega o valor de n1 e coloca na div.
+            n1 = parseFloat(n1);
+
+
+            var n2 = prompt("escolha um número");// pede para o usuário digitar o valor
+            n2 = parseFloat(n2);
+
+            // tratando erros
+            try { // tenta executar essa função
+                var msg = Calcular(op, n1, n2);// var msg recebe a função Calcular com o 3 parametros, op= botão e valores para fazer a conta n1 e n2
+            } catch (e) { // se der erro, exiba essa mensagem
+                alert(e)
+                return;
+            }
+            // fim tratando excessões
+            var msg = Calcular(op, n1, n2);// var msg recebe a função Calcular com o 3 parametros, op= botão e valores para fazer a conta n1 e n2
+            escreve(msg);// exibe a mensagem
+        }
+
+        // Criando a  função escrever, recebe o valor do parametro escreve(msg)
+        function escreve(mensagem) {
+            var output = document.querySelector('#output');
+            output.innerHTML = mensagem;
+
+        }
+
+
+
+        // Essa função vai ser chamada na linha 43 junto com a função escrever e exibir os valores calculados
+        //criando as funções - Função para calcular os valores 
+        function Calcular(op, n1, n2) {
+            //tratando erros
+            if (op !== 'soma' && op !== 'sub' && op !== 'mult' && op !== 'dvd') {
+                throw new Error("clique nas opções de calculo válido");
+                return 0;
+            }
+
+
+            if (isNaN(n1) || isNaN(n2)) {
+                throw new Error("Digite apenas números");
+                return 0;
+            }
+
+            //fim tratando erros
+
+            var NumeroCalculado = null;// inicio do calculo
+
+            //n1=n1+n;
+            // condicional para ocorrer os calculos
+            switch (op) {
+                case 'soma':
+                    NumeroCalculado = n1 + n2;
+                    break;
+
+                case 'sub':
+                    NumeroCalculado = n1 - n2;
+                    break;
+
+                case 'mult':
+                    NumeroCalculado = n1 * n2;
+                    break;
+
+                case 'dvd':
+                    NumeroCalculado = n1 / n2;
+                    break;
+
+                default:
+                    alert("Escolha uma das opções válidas");
+            }
+
+            return NumeroCalculado;// retornar o valor dos calculos
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

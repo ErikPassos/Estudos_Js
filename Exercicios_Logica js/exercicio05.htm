@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+    <h1>Exercício 5.0</h1>
+</body>
+<script>
+    // Fazer Jogador1 digitar um número
+    var n1 = prompt(
+        "Digite um número"
+    );
+    n1 = parseInt(n1);
+
+    // Fazer jogador2 digitar um número
+    var n2 = prompt(
+        "Digite um número"
+    );
+    n2 = parseInt(n2);
+
+
+
+    // Se forem iguais, mostrar a mensagem empate
+    if (n1 == n2) {
+        alert("Empate");
+    }
+    else {
+        // Sortear um número entre 0 e 1
+        var sorteio = parseInt(Math.random() * 2); //Quebrei cabeça, o Math.randow, tem que ser escrito com o 'M' em letra maiuscula!
+        alert(sorteio);
+
+        //Se o numero sorteado for 0, ganhar quem escolher o menor número
+        if (sorteio == 0) {
+            if (n1<n2) {
+                alert('O jogador N1 ganhou, numero sorteado: ' + sorteio);
+            }
+            else{
+                alert('O jogador N2 ganhou, numero sorteado: ' + sorteio);
+            }
+           
+        }
+        //Se o numero sorteado for 1, ganhar quem escolher o maio número    
+        else {
+            if(n1>n2){
+                alert('O jogador N1 ganhou, numero sorteado ' + sorteio);
+            }
+            else{
+                alert('O jogador N2 ganhou, numero sorteado ' + sorteio);
+            }
+            
+            
+           
+        }
+        
+
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>

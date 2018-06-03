@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aéra do Triângulo</title>
+</head>
+
+<body>
+    <!--Criando os botões para fazer o calculo-->
+    <button onclick="alertVer()">Ver resultado no alert</button>
+    <button onclick="ouputVer()">Ver resultado no Output</button>
+    <!--fazendo a área para mostrar no output-->
+    <div id="output"></div>
+
+    <script>
+        // variáveis para armazenar valores
+        var n1 = prompt("Digite o valor do comprimento do retângulo");
+        n1 = parseFloat(n1);
+        var n2 = prompt("Digite o segundo valor da largura do retângulo");
+        n2 = parseFloat(n2);
+
+        // função para ser mostrado no alert
+        function alertVer() {
+
+            //tratando erros
+            try {// se der erro aqui
+                var area = CalcularArea(n1, n2); // criar variavel recebendo  função para realiza o calculo
+            } catch (e) {// exiba essa mensagem aqui do throw new Error, na função CalcularÁrea
+                alert(e);
+                return
+            }
+
+            alert('Valor total da área é : ' + area);
+
+            
+        }
+
+        //função mostrar no output
+        function ouputVer() {
+
+            try {
+                var area = CalcularArea(n1, n2); // criar variavel recebendo  função para realiza o calculo
+            } catch (e) {
+                alert(e);
+                return
+            }
+
+            document.querySelector('#output').innerHTML = 'Valor total da área é : ' + area;
+        }
+
+        // função calcular área
+        function CalcularArea(largura, comprimento) {
+            //Tratando Erros
+            if(largura=== undefined || comprimento=== undefined){
+                throw new Error("Informe os valores para calcular a área!");
+            }
+            
+            
+            if (isNaN(largura) || isNaN(comprimento)) { //is_NaN() se os valores forem NAN e undefined, irá apresentar a mensagem de erro
+                throw new Error("Digite apenas números");
+            }
+            //Fim Tratando Erros
+            
+            return largura * comprimento;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

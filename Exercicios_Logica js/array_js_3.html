@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciando com Array em JS</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+
+    <script>
+
+        var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+
+        var SomaPares= Par(arr);
+        alert('A soma dos números pares  é: ' + SomaPares);
+        
+        function Par() {
+
+            var soma=0 
+            for(var i=0; i < arr.length; i++){
+                if(arr[i] % 2===0){
+                    console.log(arr[i]);
+                    
+                    document.querySelector('#output').innerHTML= 'Os números pares são : '+ arr.join(arr[i] % 2===0);
+                    soma+= arr[i];
+                    
+                }
+                
+            };
+            return soma;
+}
+            
+
+      
+
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

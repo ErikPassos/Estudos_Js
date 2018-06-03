@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 6</title>
+</head>
+
+<body>
+    <h1>Exercício 6.0</h1>
+</body>
+
+    <script>
+        //Solicitar média
+        var n1 = prompt(
+            "Digite um número"
+        );
+        n1= parseFloat(n1);
+        
+        //Solicitar média
+        var n2 = prompt(
+            "Digite um número"
+        );
+        n2= parseFloat(n2);
+       
+        //media
+        var media = (n1+n2)/2;
+       
+       //Condição se uma das médias forem '0', então reprovado automaticamente
+       if(n1==0 || n2==0){
+           alert('Reprovado automaticamente');
+       }
+       //Condição se as duas notas forem maior que 0
+       else{
+           if(media>=5){
+               alert('Parabens, vc foi aprovado! ' +media);
+           }
+           else{
+               alert('Estude mais, vc foi Reprovado! ' +media);
+           }
+       }
+
+
+    </script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciando com Array em JS</title>
+</head>
+<body>
+    <div id="output"></div>
+    <hr>
+    <div id="output2"></div>
+
+    <script>
+        
+        
+       function frutas(){
+        var produtos= new Array('laranja', 'abacate', 'morando', 'uva','banana', 'batata', 'goiaba', 'manga');
+        var addFinal= produtos.push('tomate', 'cebola'); //add um item no final do array
+        var remove= produtos.pop();// remove um valor no final do array, nesse caso cebola
+        var removeInic= produtos.shift();// remove um item do inicio do array, nesse caso laranja
+        var addInic= produtos.unshift('Caju');// add um item no inicio da lista do array, nesse caso Caju
+        var output= document.querySelector('#output');
+        var msg='';
+
+        for(var i=0; i< produtos.length; i++){
+            msg+= 'Produto'+(i+1)+':' +produtos[i]+'<br>';
+        }
+        output.innerHTML=msg;
+        
+       }
+
+       frutas();
+
+      
+    var clubes= new Array('Bahia', 'Flamengo', 'Grêmio', 'Sport', 'Palmeiras');
+    //Acessar um item (index) do Array 
+    var primeiro= clubes[0];
+    var ultimo= clubes[clubes.length-1];
+    console.log('pegando o ultimo valor do array: ' +ultimo);// retorna palmeiras
+
+    // Iterar Array
+
+    clubes.forEach(function(item, indice, array){
+        console.log('-----------');
+        console.log(item, indice);
+    });
+
+
+
+     
+
+
+    
+    
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>300 IDÉIAS PARA PROGRAMAR COMPUTADORES</title>
+</head>
+
+<body>
+    <!--1.1.2 Etiqueta - Elabore um programa que, após limpar a tela, escreve seu nome completo na primeira linha, seu endereço na segunda, e o CEP e telefone na terceira..-->
+<!--
+    <form action="javascript: enviar();" id="formulario">
+        Nome:
+        <br>
+        <input type="text" name="nome" id="nome">
+        <br> Endereço:
+        <br>
+        <input type="text" name="endereço" id="endereco">
+        <br> Telefone
+        <br>
+        <input type="number" name="telefone" id="telefone">
+        <br>
+        <br>Informe os dados do formulário para exibir:
+        <textarea rows="4" cols="50" id="campo">
+            
+        </textarea>
+        <button id="submit">Enviar</button>
+    </form>
+-->
+ <div id="ok"></div>
+
+    <script>
+      //exibindo os valores no console
+      
+       /* function enviar() {
+
+            var nomeValue = document.querySelector("#nome").value;
+            var enderecoValue = document.querySelector("#endereco").value;
+            var telefoneValue = document.querySelector("#telefone").value;
+
+            var formValue = {
+                nome: nomeValue,
+                endereco: enderecoValue,
+                telefone: telefoneValue
+            };
+
+            console.log(formValue);
+            
+
+
+        }
+
+        //var form = document.getElementById('formulario');
+        //var campo = document.getElementById('campo');
+
+       // form.addEventListener('submit', function (e) {
+
+          //  alert(campo.value);
+           // this.reset();
+
+      //  });*/
+       
+      /*Exibindo os valores no navegador*/
+      
+      function mostrarForm(){
+          var nome1= prompt('qual o seu nome ?');
+          var endereco1= prompt('qual seu endereço?');
+          var tel1= prompt('Qual seu telefone?');
+          document.querySelector('#ok').innerHTML='Seu dados são:  ' +nome1+ ' ,' +endereco1+ ' , ' +tel1;//alterando o valor da div e substituindo por 'Seu dados são:  ' +nome1+ ' ,' +endereco1+ ' , ' +tel1
+
+      }
+
+      mostrarForm();
+
+     
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
